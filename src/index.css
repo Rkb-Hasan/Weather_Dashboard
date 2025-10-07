@@ -1,1 +1,14 @@
 @import "tailwindcss";
+@layer components {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.25rem;
+  }
+}
+@theme {
+  --color-primary: "#B4D429";
+  --color-dark: "#171923";
+  --color-light: "#fff";
+  --color-body: "#1D1E28";
+}
