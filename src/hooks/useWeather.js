@@ -16,14 +16,18 @@ const useWeather = () => {
     latitude: "",
   });
   const [loading, setLoading] = useState({
-    state: false,
+    state: true,
     message: "",
   });
   const [error, setError] = useState(null);
   const { selectedLocation } = useContext(LocationContext);
   const fetchWeatherData = async (lat, long) => {
     try {
-      setLoading({ ...loading, state: true, message: "fetching weather Data" });
+      setLoading({
+        ...loading,
+        state: true,
+        message: "fetching weather Data...",
+      });
 
       const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${
